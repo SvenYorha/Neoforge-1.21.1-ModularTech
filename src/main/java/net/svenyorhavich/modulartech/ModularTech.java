@@ -51,6 +51,7 @@ public class ModularTech
     private void addCreative(BuildCreativeModeTabContentsEvent event){
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(Moditems.PLATE_IRON);
+            event.accept(Moditems.PLATE_COPPER);
         }
     }
 

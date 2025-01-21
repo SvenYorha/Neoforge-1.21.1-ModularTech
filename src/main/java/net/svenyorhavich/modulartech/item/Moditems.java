@@ -11,6 +11,8 @@ public class Moditems {
 
     public static final DeferredItem<Item> PLATE_IRON = ITEMS.register("iron_plate",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PLATE_COPPER = ITEMS.register("copper_plate",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
