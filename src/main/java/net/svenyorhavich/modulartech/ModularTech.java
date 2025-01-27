@@ -14,6 +14,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.svenyorhavich.modulartech.block.Modblocks;
 import net.svenyorhavich.modulartech.item.Moditems;
 import org.slf4j.Logger;
 
@@ -36,6 +37,7 @@ public class ModularTech
         NeoForge.EVENT_BUS.register(this);
 
         Moditems.register(modEventBus);
+        Modblocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -52,6 +54,10 @@ public class ModularTech
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(Moditems.PLATE_IRON);
             event.accept(Moditems.PLATE_COPPER);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(Modblocks.NANITE_BLOCK);
         }
     }
 

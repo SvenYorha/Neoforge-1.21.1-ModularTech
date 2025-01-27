@@ -1,4 +1,6 @@
 {
   "item.modulartech.iron_plate": "Iron Plate",
-  "item.modulartech.copper_plate": "Copper Plate"
+  "item.modulartech.copper_plate": "Copper Plate",
+
+  "block.modulartech.nanite_block": "Block of Nanites"
 }
